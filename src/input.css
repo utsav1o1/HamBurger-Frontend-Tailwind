@@ -24,7 +24,7 @@
 }
 
 @layer utilities {
-    .card__title
+    .card__title,
     .home__title{
         @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
     }
