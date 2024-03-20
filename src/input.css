@@ -5,8 +5,11 @@
 @tailwind utilities;
 
 @layer base{
+    html {
+        @apply scroll-smooth;
+    }
     body{
-        @apply text-whiteColor bg-primaryColor tracking-wider font-dmsans;
+        @apply text-whiteColor bg-primaryColor tracking-wider font-dmsans dark:bg-darkColor;
     }
 
     section{
@@ -25,8 +28,14 @@
 
 @layer utilities {
     .card__title,
-    .home__title{
+    .home__title,
+    .section__title
+    {
         @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
+    }
+    .section__title
+    {
+        @apply text-3xl;
     }
     .card__title
     {
@@ -38,4 +47,9 @@
     .paragraph {
         @apply text-paragraphColor text-xs leading-5;
     }
+}
+
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active {
+    @apply bg-secondaryColor text-black
 }
